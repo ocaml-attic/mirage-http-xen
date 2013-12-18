@@ -1,4 +1,4 @@
-OPAM_DEPENDS="mirage-xen cohttp mirage-tcpip-xen"
+OPAM_DEPENDS="cohttp mirage-tcpip-xen"
 
 case "$OCAML_VERSION,$OPAM_VERSION" in
 4.00.1,1.0.0) ppa=avsm/ocaml40+opam10 ;;
@@ -21,8 +21,6 @@ opam --version
 opam --git-version
 
 opam init
-depext=`opam install -e ubuntu $OPAM_DEPENDS`
-sudo apt-get install -qq $depext
 opam install ${OPAM_DEPENDS}
 eval `opam config env`
 make
