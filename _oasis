@@ -12,4 +12,5 @@ Library mirage_http_xen
   Path:               lib
   Findlibname:        mirage-http-xen
   Modules:            HTTP
+  InternalModules:    HTTP_IO
   BuildDepends:       cohttp.lwt-core, mirage-tcpip-xen, lwt.syntax
